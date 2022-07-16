@@ -21,8 +21,10 @@ exports.onRenderBody = (
 
   // Prevent duplicate or excluded pageview events being emitted on initial load of page by the `config` command
   // https://developers.google.com/analytics/devguides/collection/gtagjs/#disable_pageview_tracking
+  
+  // UPDATE: Enable this for single-page apps that have no routing
 
-  gtagConfig.send_page_view = false
+  gtagConfig.send_page_view = true
 
   const firstTrackingId =
     pluginOptions.trackingIds && pluginOptions.trackingIds.length
